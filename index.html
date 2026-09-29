@@ -1,83 +1,454 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#1f1f1f">
-<title>LabCode Mobile — VS Code</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+  >
+
+  <meta name="theme-color" content="#181818">
+
+  <title>LabCode Mobile — VS Code</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <div class="app-shell">
+
+  <!-- BARRA SUPERIOR -->
   <header class="titlebar">
-    <button class="icon-btn mobile-only" id="menuBtn" aria-label="Abrir explorador">☰</button>
-    <div class="brand"><span class="brand-icon">◫</span><span>LabCode Mobile</span></div>
+
+    <button
+      class="icon-btn mobile-only"
+      id="menuBtn"
+      aria-label="Abrir explorador"
+    >
+      ☰
+    </button>
+
+    <div class="brand">
+      <span class="brand-icon">◫</span>
+      <span>LabCode Mobile</span>
+    </div>
+
     <div class="title-actions">
-      <button class="icon-btn" id="saveBtn" title="Guardar">💾</button>
-      <button class="icon-btn run-icon" id="runBtn" title="Ejecutar">▶</button>
-      <button class="icon-btn" id="moreBtn" title="Más opciones">⋮</button>
+
+      <button
+        class="icon-btn"
+        id="saveBtn"
+        title="Guardar"
+      >
+        💾
+      </button>
+
+      <button
+        class="icon-btn run-icon"
+        id="runBtn"
+        title="Ejecutar"
+      >
+        ▶
+      </button>
+
+      <button
+        class="icon-btn"
+        id="moreBtn"
+        title="Más opciones"
+      >
+        ⋮
+      </button>
+
     </div>
   </header>
 
+
+  <!-- ESPACIO DE TRABAJO -->
   <div class="workspace">
+
+    <!-- BARRA DE ACTIVIDADES -->
     <aside class="activitybar">
-      <button class="activity active" data-panel="explorer" title="Explorador">▱<small>EXP</small></button>
-      <button class="activity" data-panel="search" title="Buscar">⌕<small>BUS</small></button>
-      <button class="activity" data-panel="files" title="Archivos">▤<small>ARC</small></button>
+
+      <button
+        class="activity active"
+        data-panel="explorer"
+        title="Explorador"
+      >
+        ▱
+        <small>EXP</small>
+      </button>
+
+      <button
+        class="activity"
+        data-panel="search"
+        title="Buscar"
+      >
+        ⌕
+        <small>BUS</small>
+      </button>
+
+      <button
+        class="activity"
+        data-panel="files"
+        title="Archivos"
+      >
+        ▤
+        <small>ARC</small>
+      </button>
+
       <div class="activity-spacer"></div>
-      <button class="activity" id="privacyBtn" title="Privacidad">⚖<small>INFO</small></button>
-      <button class="activity" id="settingsBtn" title="Configuración">⚙<small>CFG</small></button>
+
+      <button
+        class="activity"
+        id="privacyBtn"
+        title="Privacidad"
+      >
+        ⚖
+        <small>INFO</small>
+      </button>
+
+      <button
+        class="activity"
+        id="extensionsBtn"
+        title="Extensiones"
+      >
+        🧩
+        <small>EXT</small>
+      </button>
+
+      <button
+        class="activity"
+        id="settingsBtn"
+        title="Configuración"
+      >
+        ⚙
+        <small>CFG</small>
+      </button>
+
     </aside>
 
+
+    <!-- EXPLORADOR -->
     <aside class="sidebar" id="sidebar">
-      <div class="sidebar-head"><span id="panelTitle">EXPLORADOR</span><button class="mini-btn" id="closeSidebar">×</button></div>
-      <div class="project-name"><span>⌄</span> LABCODEMOBILE</div>
+
+      <div class="sidebar-head">
+        <span id="panelTitle">EXPLORADOR</span>
+
+        <button
+          class="mini-btn"
+          id="closeSidebar"
+        >
+          ×
+        </button>
+      </div>
+
+      <div class="project-name">
+        <span>⌄</span>
+        LABCODEMOBILE
+      </div>
+
       <div class="file-tree">
-        <button class="file-item active" data-file="html"><span class="file-icon html">&lt;/&gt;</span><span>index.html</span></button>
-        <button class="file-item" data-file="css"><span class="file-icon css">#</span><span>style.css</span></button>
-        <button class="file-item" data-file="js"><span class="file-icon js">JS</span><span>script.js</span></button>
-        <button class="file-item" data-file="readme"><span class="file-icon md">M</span><span>README.md</span></button>
-        <button class="file-item" data-file="privacy"><span class="file-icon html">&lt;/&gt;</span><span>privacy-policy</span></button>
+
+        <button
+          class="file-item active"
+          data-file="html"
+        >
+          <span class="file-icon html">&lt;/&gt;</span>
+          <span>index.html</span>
+        </button>
+
+        <button
+          class="file-item"
+          data-file="css"
+        >
+          <span class="file-icon css">#</span>
+          <span>style.css</span>
+        </button>
+
+        <button
+          class="file-item"
+          data-file="js"
+        >
+          <span class="file-icon js">JS</span>
+          <span>script.js</span>
+        </button>
+
+        <button
+          class="file-item"
+          data-file="readme"
+        >
+          <span class="file-icon md">M</span>
+          <span>README.md</span>
+        </button>
+
+        <button
+          class="file-item"
+          data-file="privacy"
+        >
+          <span class="file-icon html">&lt;/&gt;</span>
+          <span>privacy-policy</span>
+        </button>
+
       </div>
-      <div class="sidebar-section">ESQUEMA</div>
-      <div class="outline">⌁ No hay símbolos para mostrar</div>
+
+      <div class="sidebar-section">
+        ESQUEMA
+      </div>
+
+      <div class="outline">
+        ⌁ No hay símbolos para mostrar
+      </div>
+
       <div class="sidebar-bottom">
-        <button id="newFileBtn">＋ Nuevo archivo</button>
+
+        <button id="newFileBtn">
+          ＋ Nuevo archivo
+        </button>
+
       </div>
+
     </aside>
 
+
+    <!-- EDITOR PRINCIPAL -->
     <main class="main-area">
-      <div class="mobile-tabs" id="mobileTabs">
-        <button class="tab active" data-file="html"><span class="file-icon html">&lt;/&gt;</span>index.html<span class="tab-x">×</span></button>
-        <button class="tab" data-file="css"><span class="file-icon css">#</span>style.css<span class="tab-x">×</span></button>
-        <button class="tab" data-file="js"><span class="file-icon js">JS</span>script.js<span class="tab-x">×</span></button>
+
+      <!-- PESTAÑAS -->
+      <div
+        class="mobile-tabs"
+        id="mobileTabs"
+      >
+
+        <button
+          class="tab active"
+          data-file="html"
+        >
+          <span class="file-icon html">&lt;/&gt;</span>
+          index.html
+          <span class="tab-x">×</span>
+        </button>
+
+        <button
+          class="tab"
+          data-file="css"
+        >
+          <span class="file-icon css">#</span>
+          style.css
+          <span class="tab-x">×</span>
+        </button>
+
+        <button
+          class="tab"
+          data-file="js"
+        >
+          <span class="file-icon js">JS</span>
+          script.js
+          <span class="tab-x">×</span>
+        </button>
+
       </div>
 
-      <section class="editor-wrap" id="editorWrap">
-        <div class="breadcrumbs"><span>LABCODEMOBILE</span><b>›</b><span id="breadcrumbFile">index.html</span></div>
-        <div class="editor" id="editorArea">
-          <div class="line-numbers" id="lineNumbers"></div>
-          <textarea id="editor" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off"></textarea>
+
+      <!-- EDITOR -->
+      <section
+        class="editor-wrap"
+        id="editorWrap"
+      >
+
+        <div class="breadcrumbs">
+
+          <span>LABCODEMOBILE</span>
+
+          <b>›</b>
+
+          <span id="breadcrumbFile">
+            index.html
+          </span>
+
         </div>
+
+
+        <div
+          class="editor"
+          id="editorArea"
+        >
+
+          <div
+            class="line-numbers"
+            id="lineNumbers"
+          ></div>
+
+
+          <textarea
+            id="editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            autocorrect="off"
+          ></textarea>
+
+
+          <!-- AUTOCOMPLETADO -->
+          <div
+            id="suggestions"
+            class="suggestions hidden"
+          ></div>
+
+        </div>
+
       </section>
 
-      <section class="preview-wrap hidden" id="previewWrap">
-        <div class="preview-toolbar"><span>PREVIEW</span><div><button id="refreshPreview">↻</button><button id="openPreview">↗</button></div></div>
-        <iframe id="preview" title="Vista previa"></iframe>
+
+      <!-- PREVIEW -->
+      <section
+        class="preview-wrap hidden"
+        id="previewWrap"
+      >
+
+        <div class="preview-toolbar">
+
+          <span>PREVIEW</span>
+
+          <div>
+
+            <button id="refreshPreview">
+              ↻
+            </button>
+
+            <button id="openPreview">
+              ↗
+            </button>
+
+          </div>
+
+        </div>
+
+        <iframe
+          id="preview"
+          title="Vista previa"
+        ></iframe>
+
       </section>
+
     </main>
+
   </div>
 
+
+  <!-- BARRA INFERIOR -->
   <nav class="bottom-bar">
-    <div class="status-left"><span class="status-branch">⑂ main</span><span class="status-ok">✓ Listo</span></div>
-    <div class="status-center"><button id="editorMode" class="mode active">Editor</button><button id="previewMode" class="mode">Preview</button></div>
-    <div class="status-right"><span id="cursorPos">Ln 1, Col 1</span><span>UTF-8</span><span>HTML</span></div>
+
+    <div class="status-left">
+
+      <span class="status-branch">
+        ⑂ main
+      </span>
+
+      <span class="status-ok">
+        ✓ Listo
+      </span>
+
+    </div>
+
+
+    <div class="status-center">
+
+      <button
+        id="editorMode"
+        class="mode active"
+      >
+        Editor
+      </button>
+
+      <button
+        id="previewMode"
+        class="mode"
+      >
+        Preview
+      </button>
+
+    </div>
+
+
+    <div class="status-right">
+
+      <span id="cursorPos">
+        Ln 1, Col 1
+      </span>
+
+      <span>
+        UTF-8
+      </span>
+
+      <span>
+        HTML
+      </span>
+
+    </div>
+
   </nav>
 
-  <div class="toast" id="toast"></div>
-  <div class="modal-backdrop hidden" id="modalBackdrop"><div class="modal"><div class="modal-head"><b id="modalTitle">LabCode Mobile</b><button id="modalClose">×</button></div><div id="modalContent"></div></div></div>
-  <div class="more-menu hidden" id="moreMenu"><button id="clearBtn">🗑 Limpiar proyecto</button><button id="privacyMenu">⚖ Privacidad</button><button id="themeBtn">☾ Tema oscuro</button></div>
+
+  <!-- MENSAJE -->
+  <div
+    class="toast"
+    id="toast"
+  ></div>
+
+
+  <!-- MODAL -->
+  <div
+    class="modal-backdrop hidden"
+    id="modalBackdrop"
+  >
+
+    <div class="modal">
+
+      <div class="modal-head">
+
+        <b id="modalTitle">
+          LabCode Mobile
+        </b>
+
+        <button id="modalClose">
+          ×
+        </button>
+
+      </div>
+
+      <div id="modalContent"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- MENÚ -->
+  <div
+    class="more-menu hidden"
+    id="moreMenu"
+  >
+
+    <button id="clearBtn">
+      🗑 Limpiar proyecto
+    </button>
+
+    <button id="privacyMenu">
+      ⚖ Privacidad
+    </button>
+
+    <button id="themeBtn">
+      ☾ Tema oscuro
+    </button>
+
+  </div>
+
 </div>
+
+
 <script src="script.js"></script>
+
 </body>
-</html>
+        </html>
